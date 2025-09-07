@@ -1,0 +1,10 @@
+name: governor
+role: governor
+capabilities:
+  - policy_enforce
+  - require_human_approval
+mcp_access:
+  - github
+  - opa
+handoff_out: ready_to_merge
+expects_in: verification_report

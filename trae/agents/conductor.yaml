@@ -1,0 +1,15 @@
+name: conductor
+role: conductor
+capabilities:
+  - assign_tasks
+  - collect_results
+  - manage_wip_limits
+protocol:
+  message_types: [task_card, task_plan, pr_ref, critique, verification_report, ready_to_merge]
+wip_limits:
+  per_repo: 3
+  per_agent: 2
+deadlock_prevention:
+  - timeouts
+  - backoff_reassign
+  - optimistic_locking

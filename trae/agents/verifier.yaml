@@ -1,0 +1,12 @@
+name: verifier
+role: verifier
+capabilities:
+  - run_e2e
+  - perf_smoke
+mcp_access:
+  - ci
+  - puppeteer
+handoff_out: verification_report
+expects_in: pr_ref
+limits:
+  max_minutes: 15

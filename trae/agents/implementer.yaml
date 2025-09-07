@@ -1,0 +1,16 @@
+name: implementer
+role: implementer
+capabilities:
+  - edit_code
+  - open_pr
+  - add_tests
+mcp_access:
+  - github
+  - repo_fs
+  - opa
+handoff_out: pr_ref
+expects_in: task_plan
+limits:
+  max_minutes: 20
+  checkpoint_minutes: 3
+feature_flags: true

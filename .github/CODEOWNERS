@@ -1,0 +1,5 @@
+# Example CODEOWNERS
+# Adjust per repo paths and teams
+/app/**       @your-org/backend-team
+/frontend/**  @your-org/frontend-team
+/policies/**  @your-org/platform-team

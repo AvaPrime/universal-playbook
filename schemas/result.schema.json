@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "TaskResult",
+  "type": "object",
+  "required": [
+    "task_id",
+    "status",
+    "artifact_refs",
+    "checklist"
+  ],
+  "properties": {
+    "task_id": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "blocked",
+        "in_progress",
+        "ready_for_review",
+        "done"
+      ]
+    },
+    "artifact_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "kpi_results": {
+      "type": "object",
+      "additionalProperties": {
+        "type": [
+          "number",
+          "integer",
+          "string",
+          "boolean"
+        ]
+      }
+    },
+    "checklist": {
+      "type": "object",
+      "properties": {
+        "template_complete": {
+          "type": "boolean"
+        },
+        "rollback_present": {
+          "type": "boolean"
+        },
+        "opa_passed": {
+          "type": "boolean"
+        },
+        "perf_budget_met": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "template_complete",
+        "rollback_present"
+      ]
+    }
+  }
+}

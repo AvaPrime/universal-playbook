@@ -1,0 +1,10 @@
+# Example labeler rules
+backend:
+- app/**
+
+frontend:
+- frontend/**
+- src/**
+
+policy:
+- policies/**

@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "TaskCard",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "goal",
+    "acceptance_criteria",
+    "artifacts_expected",
+    "guardrails"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "goal": {
+      "type": "string"
+    },
+    "acceptance_criteria": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "metrics": {
+      "type": "object",
+      "additionalProperties": {
+        "type": [
+          "number",
+          "integer",
+          "string",
+          "boolean"
+        ]
+      }
+    },
+    "artifacts_expected": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "guardrails": {
+      "type": "object",
+      "properties": {
+        "opa_policy": {
+          "type": "string"
+        },
+        "allowed_paths": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "no_secrets": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "opa_policy",
+        "allowed_paths"
+      ]
+    }
+  }
+}

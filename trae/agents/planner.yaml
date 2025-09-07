@@ -1,0 +1,14 @@
+name: planner
+role: planner
+capabilities:
+  - read_repo
+  - search_docs
+mcp_access:
+  - github
+  - firecrawl
+  - vector_kb
+handoff_out: task_plan
+expects_in: task_card
+limits:
+  max_minutes: 10
+  checkpoint_minutes: 2

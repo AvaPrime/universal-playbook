@@ -1,0 +1,9 @@
+name: librarian
+role: librarian
+capabilities:
+  - update_docs
+  - changelog
+mcp_access:
+  - github
+handoff_out: doc_refs
+expects_in: verification_report

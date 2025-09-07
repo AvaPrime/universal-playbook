@@ -1,0 +1,14 @@
+name: critic
+role: critic
+capabilities:
+  - run_ci
+  - static_analysis
+  - coverage_report
+mcp_access:
+  - github
+  - ci
+  - opa
+handoff_out: critique
+expects_in: pr_ref
+limits:
+  max_minutes: 10
